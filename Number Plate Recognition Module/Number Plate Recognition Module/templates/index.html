@@ -1,0 +1,38 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Plate OCR</title>
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <h1>Number Plate OCR</h1>
+
+    <div id="top_heading">
+        <h2>Live Feed</h2>
+        <video id="live-video" width="30%" height="30%" autoplay playsinline></video>
+    </div>
+
+    <div>
+        <form action="">
+            <label for="plate_data">Number Plate Data:</label>
+            <input type="text" id="plate_data" name="plate_data"><br><br>
+            <input type="submit" value="Check for Authentication">
+          </form>
+    </div>
+    <script>
+        // Use JavaScript to access the camera and stream video to the <video> tag
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+                var video = document.getElementById('live-video');
+                    video.srcObject = stream;
+                })
+                .catch(function (error) {
+                    console.error('Error accessing camera:', error);
+                });
+    </script>
+</body>
+</html>
