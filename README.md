@@ -3,8 +3,8 @@ CV based Smart Parking System
 
 Contributors:
 
-Prisha Kwatra
+Prisha Kwatra - Documentation
 
-Kunal Ranjan
+Kunal Ranjan - Documentation, ANPR module
 
-Ankur Garg
+Ankur Garg - Documentation, Vacant Parking Spot module
